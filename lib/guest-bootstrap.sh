@@ -8,7 +8,7 @@ installRVM()
   curl -L https://get.rvm.io | bash -s stable
   source /home/vagrant/.rvm/scripts/rvm
 
-  RUBY_VERSION="2.0.0-p353"
+  RUBY_VERSION="2.1.1"
 
   dx_step "Installing Ruby ${RUBY_VERSION}"
   rvm install ${RUBY_VERSION} --verify-downloads 1
@@ -31,8 +31,11 @@ setupRepo(){
   gem install bundler
   bundle install
 
-  dx_step "Setup config files"
-  cp config/database.yml.dev config/database.yml
+  if ! [ -f /vagrant/pittdeltachi.com-RoR/config/database.yml ]
+  then
+    dx_step "Setup config files"
+    cp config/database.yml.dev config/database.yml
+  fi
 
   rake db:migrate RAILS_ENV=development
 }

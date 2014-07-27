@@ -23,4 +23,4 @@ cd /vagant/pittdeltachi.com-RoR
 rails c
 ```
 
-Visit [http://localhost:5001/](http://localhost:5001/) in your browser to see site running in VM
+Visit [http://localhost:3001/](http://localhost:3001/) in your browser to see site running in VM
