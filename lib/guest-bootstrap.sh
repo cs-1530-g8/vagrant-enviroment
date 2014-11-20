@@ -17,13 +17,13 @@ installRVM()
 
 cloneRepo()
 {
-  dx_step "Cloning pittdeltachi.com Ruby on Rails repo"
-  git clone https://github.com/pitt-delta-chi/pittdeltachi.com-RoR.git
+  dx_step "Cloning orgman Ruby on Rails repo"
+  git clone https://github.com/cs-1530-g8/orgman.git
 }
 
 setupRepo(){
   dx_step "Setting up pittdeltachi.com Ruby on Rails"
-  cd pittdeltachi.com-RoR
+  cd orgman
 
   source /home/vagrant/.rvm/scripts/rvm
 
@@ -31,7 +31,7 @@ setupRepo(){
   gem install bundler
   bundle install
 
-  if ! [ -f /vagrant/pittdeltachi.com-RoR/config/database.yml ]
+  if ! [ -f /vagrant/orgman/config/database.yml ]
   then
     dx_step "Setup config files"
     cp config/database.yml.dev config/database.yml
