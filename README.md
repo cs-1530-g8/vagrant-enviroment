@@ -1,25 +1,25 @@
 Vagrant Enviroment
 =======================================
-This is an automated environment for running [pittdeltachi.com Rails](https://github.com/pitt-delta-chi/pittdeltachi.com-RoR) in a VM
+This is an automated environment for running [Orgman](https://github.com/cs-1530-g8/orgman) in a VM
 
-Vagrant Environment for pittdeltachi.com-RoR repository
+Vagrant Environment for Orgman repository
 
 Quick Start for Mac
 ===================
 First get this repo onto your local mechine! You can either download the zip if you don't have git yet or git clone it!
 
-- [Download The Zip](https://github.com/pitt-delta-chi/pittdeltachi.com-RoR-vagrant-enviroment/archive/master.zip)
+- [Download The Zip](https://github.com/cs-1530-g8/vagrant-enviroment/archive/master.zip)
  - Unzip it!
  - Move the folder to where you want your code to live (e.g. ~/github/)
-- `git clone https://github.com/pitt-delta-chi/pittdeltachi.com-RoR-vagrant-enviroment.git`
+- `git clone https://github.com/cs-1530-g8/pittdeltachi.com-RoR-vagrant-enviroment.git`
 
 Then run
 
 ```
-cd pittdeltachi.com-RoR-vagrant-enviroment
+cd vagrant-enviroment
 ./bootstrap.sh
 vagrant ssh
-cd /vagant/pittdeltachi.com-RoR
+cd /vagant/cs-1530-g8
 rails c
 ```
 
